@@ -1,12 +1,13 @@
 import {createRouter, createWebHistory} from "vue-router";
-import TextArea from "@/components/TextArea.vue";
+import SetWords from "@/components/SetWords.vue";
+import SetTime from "@/components/SetTime.vue";
 
 const routes = [
     {path: '/', redirect: '/words'},
-    {path: '/words', component: TextArea},
-    {path: '/hard_words', component: TextArea},
-    {path: '/wiki', component: TextArea},
-    {path: '/ru', component: TextArea}
+    {path: '/words', component: SetWords},
+    {path: '/hard_words', component: SetWords},
+    {path: '/wiki', component: SetTime},
+    {path: '/ru', component: SetTime}
 ]
 
 export default createRouter({

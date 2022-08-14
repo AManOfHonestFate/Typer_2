@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between w-full text-neutral-700 mt-8">
+  <div class="flex justify-between w-full text-neutral-700">
     <div class="mr-2">
       press TAB to restart
     </div>

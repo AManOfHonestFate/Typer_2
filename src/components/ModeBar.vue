@@ -7,7 +7,7 @@
         class="button-mode"
         :class="{
           'border-r-0': modes.length - 1 === idx,
-          'text-neutral-300': mode.path === currentPath
+          'text-yellow-600': mode.path === currentPath
         }"
     >
       {{mode.title}}
@@ -30,29 +30,37 @@ export default defineComponent({
       ]
     }
   },
-  methods: {},
+  methods: {
+    loadText () {
+      this.$store.commit('setText', []);
+      switch (this.currentPath) {
+        case '/words':
+          this.$store.commit('setMode', 'words');
+          this.$store.dispatch('getRandomWords');
+          break;
+        case '/wiki':
+          this.$store.commit('setMode', 'time');
+          this.$store.dispatch('getRandomWiki');
+          break;
+        case '/hard_words':
+          this.$store.commit('setMode', 'words');
+          this.$store.dispatch('getRandomWordsHard');
+          break;
+        case '/ru':
+          this.$store.commit('setMode', 'time');
+          this.$store.dispatch('getRandomRu');
+          break;
+    }
+},
+  },
   computed: {
     currentPath() : string {
       return this.$route.path;
     }
   },
-  watch: {
-    '$route.path': function (newVal) {
-      switch (newVal) {
-        case '/words':
-          this.$store.dispatch('getRandomWords');
-          break;
-        case '/wiki':
-          this.$store.dispatch('getRandomWiki');
-          break;
-        case '/hard_words':
-          this.$store.dispatch('getRandomWordsHard');
-          break;
-        case '/ru':
-          this.$store.dispatch('getRandomRu');
-          break;
-      }
-    }
+  mounted() {
+    this.$watch('$route.path', this.loadText);
+    this.$watch('$store.state.reloadText', this.loadText);
   }
 })
 </script>

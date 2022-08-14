@@ -257,7 +257,7 @@ export default async function randomWords(number : number) : Promise<string[]> {
     }
 
 
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         const res = [] as string[];
         for (let i = 0; i < number; i++) {
             res.push(generateRandomWord());
