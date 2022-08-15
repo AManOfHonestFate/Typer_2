@@ -1,6 +1,6 @@
 import {createRouter, createWebHistory} from "vue-router";
-import SetWords from "@/components/SetWords.vue";
-import SetTime from "@/components/SetTime.vue";
+import SetWords from "../components/SetWords.vue";
+import SetTime from "../components/SetTime.vue";
 
 const routes = [
     {path: '/', redirect: '/words'},

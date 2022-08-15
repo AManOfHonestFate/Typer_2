@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-import randomRuText, {randomWiki, randomWords, randomWordsHard} from "@/API/api";
+import randomRuText, {randomWiki, randomWords, randomWordsHard} from "../API/api";
 
 export default createStore({
   state: {

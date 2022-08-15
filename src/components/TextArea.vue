@@ -36,8 +36,8 @@
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import myChar from "@/Interfaces/myChar";
-import Stats from "@/Interfaces/Stats";
+import myChar from "../Interfaces/myChar";
+import Stats from "../Interfaces/Stats";
 
 export default defineComponent({
   name: "TextArea",

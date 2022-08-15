@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import {defineComponent, PropType} from "vue";
-import Stats from "@/Interfaces/Stats";
+import Stats from "../Interfaces/Stats";
 
 export default defineComponent({
   name: "TyperStats",
