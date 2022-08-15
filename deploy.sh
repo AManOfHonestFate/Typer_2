@@ -13,6 +13,7 @@ git init
 git add -A
 git commit -m 'deploy'
 
+
 git push -f git@github.com:amanofhonestfate/Typer_2.git main:gh-pages
 
 cd -
