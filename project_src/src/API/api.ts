@@ -1,4 +1,4 @@
-import fetchText from "@/randomWords";
+import fetchText from '../randomWords'
 import axios from "axios";
 
 const apiError = ['Sorry,', 'API', 'error', 'has', 'occurred'];
